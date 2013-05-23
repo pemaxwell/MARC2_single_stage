@@ -1,0 +1,18 @@
+; Sums up the ascii code values of characters in a string.
+
+n_chars equals end_data - data ; calculate string length
+
+	subx r1, r1, r1 		; init r1 sum to zero
+	ldi r2, data 			; r2 is address of next char
+	ldi r3, n_chars + 1 	; init r3 as counter
+	add_loop: addi r3, -1	; subtract one from count
+	bz done 				; when zero, we're done
+	ld r4, [r2] 			; fetch next character value
+	addx r1, r4, r1 		; increment r1 with r4
+	addi r2, 1 				; increment r2 by 1
+	ba add_loop 			; jump for next iteration
+
+done: hlt 					; r1 holds the answer!
+
+data: string "Hello world" 	; data string
+end_data: 					; char after string end

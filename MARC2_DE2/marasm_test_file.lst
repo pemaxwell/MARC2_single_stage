@@ -1,0 +1,39 @@
+Marasm for MARC2 Version 1.4 (c) 2011 COL Gene Ressler
+Assembled 13:39:22 on Friday 9-11-2012 from marasm_test_file.msm
+
+          Fields                ; Sums up the ascii code values of characters in a string.
+          0DO12                 
+          1DOIm                 
+Addr Word 2 Af  Disassembly     
+                                
+=000b (11)                      n_chars equals end_data - data ; calculate string length
+                                
+0080 0c92 01911 subx r1, r1, r1 	subx r1, r1, r1 		; init r1 sum to zero
+0081 14a4 02922 subx r2, r2, r2 	ldi r2, data 			; r2 is address of next char
+0082 5701 12701 sethi r2, 1     
+0083 538e 1238e addi r2, -114   
+0084 1cb6 03933 subx r3, r3, r3 	ldi r3, n_chars + 1 	; init r3 as counter
+0085 5f00 13700 sethi r3, 0     
+0086 5b0c 1330c addi r3, 12     
+0087 5bff 133ff addi r3, -1     	add_loop: addi r3, -1	; subtract one from count
+0088 4604 10604 bz 4            	bz done 				; when zero, we're done
+0089 20a0 04120 ld r4, [r2]     	ld r4, [r2] 			; fetch next character value
+008a 0b42 01641 addx r1, r4, r1 	addx r1, r4, r1 		; increment r1 with r4
+008b 5301 12301 addi r2, 1      	addi r2, 1 				; increment r2 by 1
+008c 44fa 104fa ba -6           	ba add_loop 			; jump for next iteration
+                                
+008d 4000 10000 hlt             done: hlt 					; r1 holds the answer!
+                                
+008e 0048 0065 006c 006c        data: string "Hello world" 	; data string
+0092 006f 0020 0077 006f        
+0096 0072 006c 0064             
+                                end_data: 					; char after string end
+
+------------------------------------------------------------------------------
+Symbol Table (alpha order)
+------------------------------------------------------------------------------
+                         add_loop 0087                               data 008e
+                             done 008d                           end_data 0099
+                          n_chars 000b
+------------------------------------------------------------------------------
+There are 5 symbols.

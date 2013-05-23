@@ -1,0 +1,239 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\paul.maxwell\Documents\MARC2_DE2\simulation\modelsim
+Econtrol_unit
+Z1 w1338899025
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z4 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
+Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z6 dC:\Users\paul.maxwell\Documents\MARC2_DE2\simulation\modelsim
+Z7 8C:/Users/paul.maxwell/Documents/MARC2_DE2/controlunit.vhd
+Z8 FC:/Users/paul.maxwell/Documents/MARC2_DE2/controlunit.vhd
+l0
+L26
+VLW>9MUaNUSD]c0EElaSNj2
+Z9 OV;C;10.0c;49
+31
+Z10 !s108 1343838863.704000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/paul.maxwell/Documents/MARC2_DE2/controlunit.vhd|
+Z12 !s107 C:/Users/paul.maxwell/Documents/MARC2_DE2/controlunit.vhd|
+Z13 o-93 -work work -O0
+Z14 tExplicit 1
+!s100 3KK<flTFaU=]nESdbk?Sg3
+Acontrol_unit
+R2
+R3
+R4
+R5
+DEx4 work 12 control_unit 0 22 LW>9MUaNUSD]c0EElaSNj2
+l64
+L47
+VKK[;Wl_9^Xom>`WYM76_C2
+R9
+31
+R10
+R11
+R12
+R13
+R14
+!s100 <lkVE[806eo]NjBD6jfTj3
+Ecpu_chip
+Z15 w1343838700
+Z16 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z17 DPx9 cycloneii 19 cycloneii_atom_pack 0 22 ^`Ql[PRj=>8_[;RIfj^Ke2
+Z18 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+R4
+R5
+Z19 DPx9 cycloneii 20 cycloneii_components 0 22 M>PJYbWX3oHk=GOlfF]`M3
+R6
+Z20 8C:/Users/paul.maxwell/Documents/MARC2_DE2/simulation/modelsim/CPU_chip.vho
+Z21 FC:/Users/paul.maxwell/Documents/MARC2_DE2/simulation/modelsim/CPU_chip.vho
+l0
+L34
+VfA@2:IGB0EPEi5P?LJkf03
+!s100 0_@^IG1oVQC=X63X3DeNU2
+R9
+32
+Z22 !s108 1343840072.064000
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/paul.maxwell/Documents/MARC2_DE2/simulation/modelsim/CPU_chip.vho|
+Z24 !s107 C:/Users/paul.maxwell/Documents/MARC2_DE2/simulation/modelsim/CPU_chip.vho|
+Z25 o-work work -2002 -explicit -O0
+R14
+Astructure
+R16
+R17
+R18
+R4
+R5
+R19
+Z26 DEx4 work 8 cpu_chip 0 22 fA@2:IGB0EPEi5P?LJkf03
+l1565
+L81
+Z27 VhTVd[JGJV`NAiR34KPa>T0
+Z28 !s100 Qh?^T:Qf2bISLTo5ai?Te0
+R9
+32
+R22
+R23
+R24
+R25
+R14
+Abehavioral
+R3
+R2
+R4
+R5
+DEx4 work 8 cpu_chip 0 22 IgPO^]k53Mf2`JZSAA9^W1
+l96
+L38
+V9>S60aeAbk6h_<naSlc=o2
+R9
+31
+R13
+R14
+FC:/Users/paul.maxwell/Documents/MARC2_DE2/CPU_chip.vhd
+w1338896602
+8C:/Users/paul.maxwell/Documents/MARC2_DE2/CPU_chip.vhd
+!s108 1343838863.394000
+!s90 -reportprogress|300|-93|-work|work|C:/Users/paul.maxwell/Documents/MARC2_DE2/CPU_chip.vhd|
+!s107 C:/Users/paul.maxwell/Documents/MARC2_DE2/CPU_chip.vhd|
+!s100 :KHB4PdmYoToDNjjJXOA?0
+Ecpu_chip_vhd_tst
+Z29 w1343839844
+R4
+R5
+R6
+Z30 8C:/Users/paul.maxwell/Documents/MARC2_DE2/simulation/modelsim/CPU_chip.vht
+Z31 FC:/Users/paul.maxwell/Documents/MARC2_DE2/simulation/modelsim/CPU_chip.vht
+l0
+L30
+VRO:^[c7cmhM?c[FIz7@nl0
+R9
+32
+Z32 !s108 1343839846.628000
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/paul.maxwell/Documents/MARC2_DE2/simulation/modelsim/CPU_chip.vht|
+Z34 !s107 C:/Users/paul.maxwell/Documents/MARC2_DE2/simulation/modelsim/CPU_chip.vht|
+R25
+R14
+!s100 D5abHbHEjNZHz<?SFCNaX1
+Acpu_chip_arch
+R4
+R5
+DEx4 work 16 cpu_chip_vhd_tst 0 22 RO:^[c7cmhM?c[FIz7@nl0
+l61
+L32
+V20WQkNiYMjRf0:GMObfzB0
+R9
+32
+R32
+R33
+R34
+R25
+R14
+!s100 8cz0P23W5FBAINIi7M9bA1
+Ecpu_marc1
+Z35 w1338831510
+R2
+R3
+R4
+R5
+R6
+Z36 8C:/Users/paul.maxwell/Documents/MARC2_DE2/CPU.vhd
+Z37 FC:/Users/paul.maxwell/Documents/MARC2_DE2/CPU.vhd
+l0
+L8
+VULBOaEYSe6Pj=fzf29U`j2
+R9
+31
+Z38 !s108 1343838863.144000
+Z39 !s90 -reportprogress|300|-93|-work|work|C:/Users/paul.maxwell/Documents/MARC2_DE2/CPU.vhd|
+Z40 !s107 C:/Users/paul.maxwell/Documents/MARC2_DE2/CPU.vhd|
+R13
+R14
+!s100 _E^X]hWdSLz8hCfJmJdhT3
+Ait
+R2
+R3
+R4
+R5
+DEx4 work 9 cpu_marc1 0 22 ULBOaEYSe6Pj=fzf29U`j2
+l64
+L22
+V@3[O>lM1QliA[<Q]iz=Kk1
+R9
+31
+R38
+R39
+R40
+R13
+R14
+!s100 @jWBkJl7Wj0>T`9jnoIPk1
+Esystem_ram
+Z41 w1338827269
+R4
+R5
+R6
+Z42 8C:/Users/paul.maxwell/Documents/MARC2_DE2/system_ram.vhd
+Z43 FC:/Users/paul.maxwell/Documents/MARC2_DE2/system_ram.vhd
+l0
+L42
+VP2SFQ46eEW1Y@7nd^EB9:1
+R9
+31
+Z44 !s108 1343838864.204000
+Z45 !s90 -reportprogress|300|-93|-work|work|C:/Users/paul.maxwell/Documents/MARC2_DE2/system_ram.vhd|
+Z46 !s107 C:/Users/paul.maxwell/Documents/MARC2_DE2/system_ram.vhd|
+R13
+R14
+!s100 A^;_[ScOBo<35ScnT>ke00
+Asyn
+R4
+R5
+DEx4 work 10 system_ram 0 22 P2SFQ46eEW1Y@7nd^EB9:1
+l85
+L54
+VZjaUZEEmfKe72z6G0kFJ_2
+R9
+31
+R44
+R45
+R46
+R13
+R14
+!s100 ZEoNa1AZ2SDW[I=PfAmZh2
+Esystem_rom
+Z47 w1338826243
+R4
+R5
+R6
+Z48 8C:/Users/paul.maxwell/Documents/MARC2_DE2/system_rom.vhd
+Z49 FC:/Users/paul.maxwell/Documents/MARC2_DE2/system_rom.vhd
+l0
+L42
+V?^Q[K6S=_aR]68hXgM7Mb2
+R9
+31
+Z50 !s108 1343838864.494000
+Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/paul.maxwell/Documents/MARC2_DE2/system_rom.vhd|
+Z52 !s107 C:/Users/paul.maxwell/Documents/MARC2_DE2/system_rom.vhd|
+R13
+R14
+!s100 DNL2cHiEBFbX[AaHe6eOM0
+Asyn
+R4
+R5
+DEx4 work 10 system_rom 0 22 ?^Q[K6S=_aR]68hXgM7Mb2
+l81
+L52
+VgGW1fKR7cU2lzg5cP?;]a0
+R9
+31
+R50
+R51
+R52
+R13
+R14
+!s100 VSSkL]?S6]KEkm[]dF3kI2

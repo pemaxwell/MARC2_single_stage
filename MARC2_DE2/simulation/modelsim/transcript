@@ -1,0 +1,7 @@
+# Compile of CPU_chip.vho was successful.
+# Compile of CPU_chip.vht failed with 1 errors.
+# 2 compiles, 1 failed with 1 error. 
+# Compile of CPU_chip.vho was successful.
+# Compile of CPU_chip.vht was successful.
+# 2 compiles, 0 failed with no errors. 
+vsim +altera -do CPU_chip_run_msim_rtl_vhdl.do -l msim_transcript -gui rtl_work.cpu_chip_vhd_tst
