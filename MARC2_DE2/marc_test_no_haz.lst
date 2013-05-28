@@ -1,5 +1,5 @@
 Marasm for MARC2 Version 1.4 (c) 2011 COL Gene Ressler
-Assembled 15:03:37 on Wednesday 22-5-2013 from marc_test_no_haz.msm
+Assembled 15:26:55 on Friday 24-5-2013 from marc_test_no_haz.msm
 
           Fields                ;test program to test instructions of the MARC processor
           0DO12                 
@@ -14,45 +14,45 @@ Addr Word 2 Af  Disassembly
                                 
                                 ;main program starting at reset vector
                                 origin	0x0080
-0080 4f02 11702 sethi r1, 2     		sethi	R1, 0x02		;R1 <= 0x0200
+0080 4f01 11701 sethi r1, 1     		sethi	R1, 0x01		;R1 <= 0x0100
 0081 5303 12303 addi r2, 3      		addi	R2, 0x03		;R2 <= 0x0003
 0082 1a30 03430 notx r3, r3     		notx	R3, R3			;R3 <= 0xFFFF
 0083 0500 00a00 nop             		nop
 0084 0500 00a00 nop             		nop
-0085 0382 00701 jmp r1          		jmp		R1				;PC <= 0x0200
+0085 0382 00701 jmp r1          		jmp		R1				;PC <= 0x0100
                                 
                                 ;jump location to test branching
-                                origin	0x0200
-0200 0026 00023 st [r2], r3     		st		[R2], R3		;mem[0x03] = 0xffff
-0201 2910 05210 sllx r5, r1     		sllx	R5, R1			;R5 <= 0x0400
-0202 3190 06310 srlx r6, r1     		srlx	R6, R1			;R6 <= 0x0100
-0203 3b14 07612 addx r7, r1, r2 		addx	R7, R1, R2		;R7 <= 0x0203
-0204 22b4 04532 andx r4, r3, r2 		andx	R4, R3, R2		;R4 <= 0x0003
-0205 1c22 03821 orx r3, r2, r1  		orx		R3, R2, R1		;R2 <= 0x0203
-0206 2cdc 05956 subx r5, r5, r6 		subx	R5, R5, R6		;R5 <= 0x0300
-0207 30a0 06120 ld r6, [r2]     		ld		R6, [R2]		;R6 <= mem[0x0003] <= 0xffff
-0208 3cfe 07977 subx r7, r7, r7 		subx	R7, R7, R7		;R7 <= 0
-0209 4602 10602 bz 2            		bz		dest1			;branch to dest1 if zero
-020a 0500 00a00 nop             		nop
-020b 0500 00a00 nop             		nop
-020c 4402 10402 ba 2            dest1:	ba		dest2			;branch always to dest2
-020d 0500 00a00 nop             		nop
-020e 0500 00a00 nop             		nop
-020f 3cea 07965 subx r7, r6, r5 dest2:	subx	R7, R6, R5		;R7 <= -0x0200
-0210 4502 10502 bn 2            		bn		dest3			;branch if negative to dest3		
-0211 0500 00a00 nop             		nop
-0212 0500 00a00 nop             		nop
-0213 8300 20300 call 0x0300     dest3:	call	0x0300			;PC <= 0x0300, SP<=0x0209
-0214 4000 10000 hlt             		hlt						;stop ops, go reset
+                                origin	0x0100
+0100 0016 00013 st [r1], r3     		st		[R1], R3		;mem[0x03] = 0xffff
+0101 2910 05210 sllx r5, r1     		sllx	R5, R1			;R5 <= 0x0400
+0102 3190 06310 srlx r6, r1     		srlx	R6, R1			;R6 <= 0x0100
+0103 3b14 07612 addx r7, r1, r2 		addx	R7, R1, R2		;R7 <= 0x0103
+0104 22b4 04532 andx r4, r3, r2 		andx	R4, R3, R2		;R4 <= 0x0003
+0105 1c22 03821 orx r3, r2, r1  		orx		R3, R2, R1		;R2 <= 0x0103
+0106 2cdc 05956 subx r5, r5, r6 		subx	R5, R5, R6		;R5 <= 0x0180
+0107 3090 06110 ld r6, [r1]     		ld		R6, [R1]		;R6 <= mem[0x0100] <= 0x0016
+0108 3cfe 07977 subx r7, r7, r7 		subx	R7, R7, R7		;R7 <= 0
+0109 4602 10602 bz 2            		bz		dest1			;branch to dest1 if zero
+010a 0500 00a00 nop             		nop
+010b 0500 00a00 nop             		nop
+010c 4402 10402 ba 2            dest1:	ba		dest2			;branch always to dest2
+010d 0500 00a00 nop             		nop
+010e 0500 00a00 nop             		nop
+010f 3cea 07965 subx r7, r6, r5 dest2:	subx	R7, R6, R5		;R7 <= -0x0200
+0110 4502 10502 bn 2            		bn		dest3			;branch if negative to dest3		
+0111 0500 00a00 nop             		nop
+0112 0500 00a00 nop             		nop
+0113 81c0 201c0 call 0x01c0     dest3:	call	0x01C0			;PC <= 0x01C0, SP<=0x0114
+0114 4000 10000 hlt             		hlt						;stop ops, go reset
                                 
                                 ;function call destination address
-                                origin 0x0300
-0300 4100 10100 ret             		ret						;PC <= SP = 0x0209
+                                origin 0x01C0
+01c0 4100 10100 ret             		ret						;PC <= SP = 0x0114
 
 ------------------------------------------------------------------------------
 Symbol Table (alpha order)
 ------------------------------------------------------------------------------
-                            dest1 020c                              dest2 020f
-                            dest3 0213
+                            dest1 010c                              dest2 010f
+                            dest3 0113
 ------------------------------------------------------------------------------
 There are 3 symbols.

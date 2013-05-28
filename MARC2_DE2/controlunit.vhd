@@ -113,6 +113,7 @@ begin
 					ld_op <= '0';
 					st_op <= '0';
 					PC <= PC + 1;
+					mem_wr <= '0';
 					
 				when decode => 
 				   --PC <= PC + 1;			--moved location to this state to avoid timing issues
@@ -123,9 +124,11 @@ begin
 						AR_EN <= '0';						--added 13 Nov 12
 						ctl_wd <= (others=>'0');  		--added 13 Nov 12 to deal with data bus issues
 						--AR_EN <= '0';-- Mem_cs <= '0';  Mem_wr <= '0';
-						Mem_CS <= '1';					  --return value to off
-						Mem_Rd <= '1';					  --return value to off
+						Mem_CS <= '0';					  --return value to off
+						Mem_Rd <= '0';					  --return value to off
+						Mem_wr <= '1';						--added 27 May 13
 					elsif IR(14)='0' then
+						SP_EN <= '0';
 						case test is
 							when "1001" => op <= subx; ctl_wd <= IR(15 downto 1);ld_op <= '0'; st_op <= '0';Mem_CS <= '1';					  --return value to off
 					Mem_Rd <= '1';	AR_EN <= '1';				--added 13 Nov 12				  --return value to off
@@ -148,46 +151,50 @@ begin
 					 			   Mem_rd <='0';
 					 			   R_we <= '0';
 									AR_EN <= '0';				--added 20 Nov 12
-							when "0000" => op <= st; ctl_wd <= IR(15 downto 1);ld_op <= '0'; st_op <= '0';Mem_CS <= '1';					  --return value to off
-					Mem_Rd <= '1';	AR_EN <= '1';				--added 13 Nov 12				  --return value to off
+							when "0000" => op <= st; ctl_wd <= IR(15 downto 1);ld_op <= '0'; st_op <= '1';Mem_CS <= '1';					  --return value to off
+					Mem_Rd <= '1';	AR_EN <= '0';				--added 13 Nov 12				  --return value to off
 							when others => op <= nop; ctl_wd <= (others=>'0');ld_op <= '0'; st_op <= '0';Mem_CS <= '1';					  --return value to off
 					Mem_Rd <= '1';	AR_EN <= '1';				--added 13 Nov 12				  --return value to off  --added nop to deal with unexpected values
 					    end case;
 					else
-						AR_EN <= '1';				--added 13 Nov 12
-						Mem_CS <= '1';					  --return value to off
-						Mem_Rd <= '1';					  --return value to off
+						if IR(10 downto 8) /= "001" then
+							Mem_CS <= '1';					  --return value to off
+							Mem_Rd <= '1';					  --return value to off
+						else
+							Mem_CS <= '0';
+							Mem_Rd <= '0';
+						end if;
 						case IR(10 downto 8) is
-							when "000" => op <= hlt; ctl_wd <= IR(15 downto 1); ld_op <= '0'; st_op <= '0';
+							when "000" => op <= hlt; ctl_wd <= IR(15 downto 1); ld_op <= '0'; st_op <= '0';AR_EN <= '1';	SP_EN <= '0';			--added 13 Nov 12
 							when "001" => op <= ret; ctl_wd <= IR(15 downto 1); ld_op <= '0'; st_op <= '0';
-										   SP <= SP + 1;
-							when "011" => op <= addi; ctl_wd <= IR(15 downto 8)&'0'&IR(13 downto 11)&"000";ld_op <= '0'; st_op <= '0';
+										   AR_EN <= '0'; SP_EN <= '1'; SP <= SP + 1; 
+							when "011" => op <= addi; ctl_wd <= IR(15 downto 8)&'0'&IR(13 downto 11)&"000";ld_op <= '0'; st_op <= '0';AR_EN <= '1';SP_EN <= '0';
 											if IR(7)='1' then
 												offset <= X"FF"&IR(7 downto 0);
 											else
 												offset <= X"00"&IR(7 downto 0);
 											end if;
-							when "100" =>  op <= ba; ctl_wd <= IR(15 downto 1); ld_op <= '0'; st_op <= '0';
+							when "100" =>  op <= ba; ctl_wd <= IR(15 downto 1); ld_op <= '0'; st_op <= '0';AR_EN <= '1';SP_EN <= '0';
 											if IR(7)='1' then
 												offset <= X"FF"&IR(7 downto 0);
 											else
 												offset <= X"00"&IR(7 downto 0);
 											end if;
-							when "101" => op <= bn; ctl_wd <= IR(15 downto 1); ld_op <= '0'; st_op <= '0';
+							when "101" => op <= bn; ctl_wd <= IR(15 downto 1); ld_op <= '0'; st_op <= '0';AR_EN <= '1';SP_EN <= '0';
 											if IR(7)='1' then
 												offset <= X"FF"&IR(7 downto 0);
 											else
 												offset <= X"00"&IR(7 downto 0);
 											end if;
-							when "110" => op <= bz; ctl_wd <= IR(15 downto 1); ld_op <= '0'; st_op <= '0';
+							when "110" => op <= bz; ctl_wd <= IR(15 downto 1); ld_op <= '0'; st_op <= '0';AR_EN <= '1';SP_EN <= '0';
 											if IR(7)='1' then
 												offset <= X"FF"&IR(7 downto 0);
 											else
 												offset <= X"00"&IR(7 downto 0);
 											end if;
-							when "111" => op <= sethi; offset<=IR(7 downto 0)&X"00"; ld_op <= '0'; st_op <= '0';
+							when "111" => op <= sethi; offset<=IR(7 downto 0)&X"00"; ld_op <= '0'; st_op <= '0';AR_EN <= '1';SP_EN <= '0';
 							 			  ctl_wd <= IR(15 downto 11)&'0'&IR(10 downto 8)&"000000";				
-							when others => op <= nop; ctl_wd <= (others=>'0'); ld_op <= '0'; st_op <= '0';
+							when others => op <= nop; ctl_wd <= (others=>'0'); ld_op <= '0'; st_op <= '0';AR_EN <= '1';SP_EN <= '0';
 						end case;
 					end if;
 					current_state <= execute;
@@ -195,36 +202,35 @@ begin
 	 			when execute =>
 				 --if (op /= call and op /= ret) then AR <= PC; --change added/commented out 21 Nov 12
 				 --end if;
-				 AR_EN <= '1';
-				 
 				 if (op /= call) then PCd_EN <= '0'; --added
 				 end if;
 				 case op is
-					 when subx => ld_op <= '0'; st_op <= '0';
-					 when st => St_op <= '1'; Mem_cs <='0'; ld_op <= '0';
-					 			Mem_wr <= '0'; 
-					 when jmp => PC <= CU_data_bus; ld_op <= '0'; st_op <= '0';
-					 when addx => ld_op <= '0'; st_op <= '0';
-					 when andx => ld_op <= '0'; st_op <= '0';
-					 when notx => ld_op <= '0'; st_op <= '0';
-					 when srlx => ld_op <= '0'; st_op <= '0';
-					 when sllx => ld_op <= '0'; st_op <= '0';
-					 when ld => ld_op <='0'; st_op <= '0';
+					 when subx => ld_op <= '0'; st_op <= '0';AR_EN <= '1';SP_EN <= '0';
+					 when st => St_op <= '0'; Mem_cs <='0'; ld_op <= '0';SP_EN <= '0';
+					 			Mem_wr <= '0'; AR_EN <= '1';
+					 when jmp => PC <= CU_data_bus; ld_op <= '0'; st_op <= '0';AR_EN <= '1'; AR <= CU_data_bus;SP_EN <= '0';    --added 24 May 13 AR stmnt
+					 when addx => ld_op <= '0'; st_op <= '0';AR_EN <= '1';SP_EN <= '0';
+					 when andx => ld_op <= '0'; st_op <= '0';AR_EN <= '1';SP_EN <= '0';
+					 when notx => ld_op <= '0'; st_op <= '0';AR_EN <= '1';SP_EN <= '0';
+					 when srlx => ld_op <= '0'; st_op <= '0';AR_EN <= '1';SP_EN <= '0';
+					 when sllx => ld_op <= '0'; st_op <= '0';AR_EN <= '1';SP_EN <= '0';
+					 when ld => ld_op <='0'; st_op <= '0';AR_EN <= '1';SP_EN <= '0';
 					 			   Mem_cs <= '0';
 					 			   Mem_rd <='0'; 
 					 			   R_we <= '1';	   --ld_op & R_we to allow register capture
-					 when sethi => const_out <= offset; ld_op <= '0'; st_op <= '0';
-				 	 when addi => const_out <= offset;ld_op <= '0'; st_op <= '0';
+					 when sethi => const_out <= offset; ld_op <= '0'; st_op <= '0';AR_EN <= '1';SP_EN <= '0';
+				 	 when addi => const_out <= offset;ld_op <= '0'; st_op <= '0';AR_EN <= '1';SP_EN <= '0';
 					 when ret => Mem_cs <= '0'; Mem_rd <= '0'; ld_op <= '0'; st_op <= '0';
-					 			    SP_EN <='1'; 
+					 			    SP_EN <='0'; AR_EN <= '1'; PC <= CU_data_bus; 
+									 AR <= CU_data_bus;
 				 	 when bz => if PSR(0)='1' then PC <= PC + offset; AR <= PC + offset; end if; 			--added 26 Nov 12
-									ld_op <= '0'; st_op <= '0'; 
+									ld_op <= '0'; st_op <= '0'; AR_EN <= '1';SP_EN <= '0';
 					 when bn => if PSR(1)='1' then PC <= PC + offset; AR <= PC + offset;	end if;			--added 26 Nov 12
-									ld_op <= '0'; st_op <= '0'; 									
+									ld_op <= '0'; st_op <= '0'; AR_EN <= '1';		SP_EN <= '0';							
 					 when ba => PC <= PC + offset;ld_op <= '0'; st_op <= '0'; AR <= PC + offset;
-					 when orx => ld_op <= '0'; st_op <= '0';
-					 when call => Mem_cs <= '0';  Mem_wr <= '0';ld_op <= '0'; st_op <= '0';
-					 			  SP_EN <= '1';  
+					 when orx => ld_op <= '0'; st_op <= '0';AR_EN <= '1';SP_EN <= '0';
+					 when call => Mem_cs <= '0';  Mem_rd <= '1'; Mem_wr <= '0';ld_op <= '0'; st_op <= '0';
+					 			  SP_EN <= '1';  AR_EN <= '1';
 								  PCd_EN <='1';  
 					 			  AR <= offset; --change added 
 									--PC <= offset;
@@ -235,7 +241,7 @@ begin
 				 end if;
 				 
 				when wb =>
-					mem_wr <= '1';					   --return value
+					mem_wr <= '0';					   --return value
 					AR_EN <= '1'; 
 				   SP_EN <= '0'; PCd_EN <= '0';
 					AR <= PC;
@@ -255,8 +261,8 @@ begin
 					if op = call then SP <= SP - 1;	PC <= offset;
 						 AR <= offset;		--added 28 Jan 04
 					end if;	 --release bus
-					if op = ret then PC <= CU_data_bus; 
-							AR <= CU_data_bus;--PC;   --
+					if op = ret then SP_EN <= '0';
+						AR_EN <= '1';
 					end if;
 					current_state <= fetch;
 					--place new value on addr. bus

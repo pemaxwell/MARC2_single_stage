@@ -2,24 +2,24 @@ m255
 K3
 13
 cModel Technology
-Z0 dC:\Users\paul.maxwell\Documents\MARC2_DE2\simulation\modelsim
+Z0 dC:\Users\paul.maxwell\Documents\GitHub\MARC2_single_stage\MARC2_DE2\simulation\modelsim
 Econtrol_unit
-Z1 w1353938078
+Z1 w1369750066
 Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
 Z3 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
 Z4 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
 Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z6 dC:\Users\paul.maxwell\Documents\MARC2_DE2\simulation\modelsim
-Z7 8C:/Users/paul.maxwell/Documents/MARC2_DE2/controlunit.vhd
-Z8 FC:/Users/paul.maxwell/Documents/MARC2_DE2/controlunit.vhd
+Z6 dC:\Users\paul.maxwell\Documents\GitHub\MARC2_single_stage\MARC2_DE2\simulation\modelsim
+Z7 8C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/controlunit.vhd
+Z8 FC:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/controlunit.vhd
 l0
 L26
 VLW>9MUaNUSD]c0EElaSNj2
 Z9 OV;C;10.0c;49
 31
-Z10 !s108 1354024051.198000
-Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/paul.maxwell/Documents/MARC2_DE2/controlunit.vhd|
-Z12 !s107 C:/Users/paul.maxwell/Documents/MARC2_DE2/controlunit.vhd|
+Z10 !s108 1369750171.247000
+Z11 !s90 -reportprogress|300|-93|-work|work|-O0|C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/controlunit.vhd|
+Z12 !s107 C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/controlunit.vhd|
 Z13 o-93 -work work -O0
 Z14 tExplicit 1
 !s100 3KK<flTFaU=]nESdbk?Sg3
@@ -31,7 +31,7 @@ R5
 DEx4 work 12 control_unit 0 22 LW>9MUaNUSD]c0EElaSNj2
 l64
 L47
-V_?5>?ZdDZ5Xo7NZG]KRAJ3
+V`<h<?BXJB??6Wf2BPWAH51
 R9
 31
 R10
@@ -39,61 +39,85 @@ R11
 R12
 R13
 R14
-!s100 JQ<UR;JP2RLWmgE^Z[>g[2
+!s100 fmlj6nzA]0LiO_YS6g8F01
 Ecpu_chip
-Z15 w1353951136
+Z15 w1354028170
 R3
 R2
 R4
 R5
 R6
-Z16 8C:/Users/paul.maxwell/Documents/MARC2_DE2/CPU_chip.vhd
-Z17 FC:/Users/paul.maxwell/Documents/MARC2_DE2/CPU_chip.vhd
+Z16 8C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/CPU_chip.vhd
+Z17 FC:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/CPU_chip.vhd
 l0
 L28
-VIgPO^]k53Mf2`JZSAA9^W1
-R9
-31
-Z18 !s108 1354024051.010000
-Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/paul.maxwell/Documents/MARC2_DE2/CPU_chip.vhd|
-Z20 !s107 C:/Users/paul.maxwell/Documents/MARC2_DE2/CPU_chip.vhd|
-R13
-R14
+V45;_kKH22Q9e9:8oRgFHg2
 !s100 >Odg?hl1Y0F=8zRkbe<Zb3
+R9
+32
+Z18 !s108 1369750177.612000
+Z19 !s90 -reportprogress|300|-work|work|-O0|C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/simulation/modelsim/CPU_chip.vho|C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/CPU_chip.vhd|
+Z20 !s107 C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/CPU_chip.vhd|C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/simulation/modelsim/CPU_chip.vho|
+Z21 o-work work -O0
+R14
 Abehavioral
 R3
 R2
 R4
 R5
-DEx4 work 8 cpu_chip 0 22 IgPO^]k53Mf2`JZSAA9^W1
+Z22 DEx4 work 8 cpu_chip 0 22 45;_kKH22Q9e9:8oRgFHg2
 l98
 L38
-VDahjjSa6Me48Q>F6dl0S?1
+Z23 Vgg6[F@^RR6`5IP2P<>5m_1
+Z24 !s100 Acn`6ETmT8IdmKMhMezB<0
 R9
-31
+32
 R18
 R19
 R20
-R13
+R21
 R14
-!s100 4WiUL[jSTJ1Ead?9CCS@A3
+Astructure
+Z25 w1369750147
+Z26 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 o1R38HVMn[SE4UeTMVZCm1
+Z27 DPx10 cycloneive 21 cycloneive_components 0 22 DPT?b^WKV@PW?kKhFJ15g3
+Z28 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z29 DPx6 altera 11 dffeas_pack 0 22 <>LGN2HBgbIHaklj`n9^R1
+Z30 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+R4
+R5
+Z31 DPx6 altera 28 altera_primitives_components 0 22 DYfIPb2DD]?<>^1:7T<AB3
+Z32 DEx4 work 8 cpu_chip 0 22 :T6K4>_o_j7izXl_B>4P;2
+Z33 8C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/simulation/modelsim/CPU_chip.vho
+Z34 FC:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/simulation/modelsim/CPU_chip.vho
+l7873
+L83
+Z35 V@5>=Bh6JfS0JgPk2i@d?>0
+Z36 !s100 `=C2aTY7fG5fQ7`c33jE51
+R9
+32
+R18
+R19
+R20
+R21
+R14
 Ecpu_marc1
-Z21 w1353357904
+Z37 w1353357906
 R2
 R3
 R4
 R5
 R6
-Z22 8C:/Users/paul.maxwell/Documents/MARC2_DE2/CPU.vhd
-Z23 FC:/Users/paul.maxwell/Documents/MARC2_DE2/CPU.vhd
+Z38 8C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/CPU.vhd
+Z39 FC:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/CPU.vhd
 l0
 L8
 VULBOaEYSe6Pj=fzf29U`j2
 R9
 31
-Z24 !s108 1354024050.807000
-Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/paul.maxwell/Documents/MARC2_DE2/CPU.vhd|
-Z26 !s107 C:/Users/paul.maxwell/Documents/MARC2_DE2/CPU.vhd|
+Z40 !s108 1369749370.897000
+Z41 !s90 -reportprogress|300|-93|-work|work|-O0|C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/CPU.vhd|
+Z42 !s107 C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/CPU.vhd|
 R13
 R14
 !s100 _E^X]hWdSLz8hCfJmJdhT3
@@ -108,29 +132,29 @@ L22
 VT;U:YH31R9;l[STTim0hf1
 R9
 31
-R24
-R25
-R26
+R40
+R41
+R42
 R13
 R14
 !s100 oLUZ9JZ:ie^BfPka5GLZ<1
 Ede2_clock
-Z27 w1338834439
+Z43 w1338834440
 R3
 R2
 R4
 R5
 R6
-Z28 8C:/Users/paul.maxwell/Documents/MARC2_DE2/DE2_CLOCK.vhd
-Z29 FC:/Users/paul.maxwell/Documents/MARC2_DE2/DE2_CLOCK.vhd
+Z44 8C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/DE2_CLOCK.vhd
+Z45 FC:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/DE2_CLOCK.vhd
 l0
 L7
 Vmb9iC=>0193f5Y;Rl43<f1
 R9
 31
-Z30 !s108 1354024050.120000
-Z31 !s90 -reportprogress|300|-93|-work|work|C:/Users/paul.maxwell/Documents/MARC2_DE2/DE2_CLOCK.vhd|
-Z32 !s107 C:/Users/paul.maxwell/Documents/MARC2_DE2/DE2_CLOCK.vhd|
+Z46 !s108 1369749013.398000
+Z47 !s90 -reportprogress|300|-93|-work|work|C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/DE2_CLOCK.vhd|
+Z48 !s107 C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/DE2_CLOCK.vhd|
 R13
 R14
 !s100 lHj?dclTci]TkZDV5a1:S0
@@ -145,29 +169,29 @@ L15
 V:gHEZHF``_ULc]ncaD?e`0
 R9
 31
-R30
-R31
-R32
+R46
+R47
+R48
 R13
 R14
 !s100 mURo4^RJZ`E<J`X=ZjLAk1
 Edp_marc1
-Z33 w1353357825
+Z49 w1353357826
 R2
 R3
 R4
 R5
 R6
-Z34 8C:/Users/paul.maxwell/Documents/MARC2_DE2/datapath.vhd
-Z35 FC:/Users/paul.maxwell/Documents/MARC2_DE2/datapath.vhd
+Z50 8C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/datapath.vhd
+Z51 FC:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/datapath.vhd
 l0
 L11
 VQ_03@8;bP;YCcYCL16CPA0
 R9
 31
-Z36 !s108 1354024050.651000
-Z37 !s90 -reportprogress|300|-93|-work|work|C:/Users/paul.maxwell/Documents/MARC2_DE2/datapath.vhd|
-Z38 !s107 C:/Users/paul.maxwell/Documents/MARC2_DE2/datapath.vhd|
+Z52 !s108 1369749013.757000
+Z53 !s90 -reportprogress|300|-93|-work|work|C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/datapath.vhd|
+Z54 !s107 C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/datapath.vhd|
 R13
 R14
 !s100 ZXC1`8=g9c0PQzTR5GjJ<1
@@ -182,29 +206,29 @@ L28
 VPUHZO^8I^RNDM:oln`dO:1
 R9
 31
-R36
-R37
-R38
+R52
+R53
+R54
 R13
 R14
 !s100 zcK3L]bBcF_gaPX;676SQ0
 Efunction_unit
-Z39 w1352836459
+Z55 w1352836460
 R2
 R3
 R4
 R5
 R6
-Z40 8C:/Users/paul.maxwell/Documents/MARC2_DE2/function_unit.vhd
-Z41 FC:/Users/paul.maxwell/Documents/MARC2_DE2/function_unit.vhd
+Z56 8C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/function_unit.vhd
+Z57 FC:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/function_unit.vhd
 l0
 L26
 V0d@@=Bkk<QSTN6KaJMUNf1
 R9
 31
-Z42 !s108 1354024050.432000
-Z43 !s90 -reportprogress|300|-93|-work|work|C:/Users/paul.maxwell/Documents/MARC2_DE2/function_unit.vhd|
-Z44 !s107 C:/Users/paul.maxwell/Documents/MARC2_DE2/function_unit.vhd|
+Z58 !s108 1369749013.601000
+Z59 !s90 -reportprogress|300|-93|-work|work|C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/function_unit.vhd|
+Z60 !s107 C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/function_unit.vhd|
 R13
 R14
 !s100 WBR^;UZnROJn0CK2nz5zP0
@@ -219,27 +243,27 @@ L38
 V@Za`^<<ca0HMz^Njd<2zg3
 R9
 31
-R42
-R43
-R44
+R58
+R59
+R60
 R13
 R14
 !s100 XDT8GCV5ao@J4?OdHDic<0
 Ereg16bit
-Z45 w1353357741
+Z61 w1369409327
 R4
 R5
 R6
-Z46 8C:/Users/paul.maxwell/Documents/MARC2_DE2/reg16bit.vhd
-Z47 FC:/Users/paul.maxwell/Documents/MARC2_DE2/reg16bit.vhd
+Z62 8C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/reg16bit.vhd
+Z63 FC:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/reg16bit.vhd
 l0
 L24
 V_bHzSFTKS21YFTlM6PeJQ1
 R9
 31
-Z48 !s108 1354024050.245000
-Z49 !s90 -reportprogress|300|-93|-work|work|C:/Users/paul.maxwell/Documents/MARC2_DE2/reg16bit.vhd|
-Z50 !s107 C:/Users/paul.maxwell/Documents/MARC2_DE2/reg16bit.vhd|
+Z64 !s108 1369749013.507000
+Z65 !s90 -reportprogress|300|-93|-work|work|C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/reg16bit.vhd|
+Z66 !s107 C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/reg16bit.vhd|
 R13
 R14
 !s100 Ic5^Y8o5?;1nIO9ziTD260
@@ -249,30 +273,30 @@ R5
 DEx4 work 8 reg16bit 0 22 _bHzSFTKS21YFTlM6PeJQ1
 l36
 L35
-Vm^`G08iTNC@`?5HZH]5>U3
+V<=Zb8[R:lIe^IFe@5=]<13
 R9
 31
-R48
-R49
-R50
+R64
+R65
+R66
 R13
 R14
-!s100 =T9oekR]87BzF=J]Ek]>h2
+!s100 :Tz4_2e4jII[_OddeX;:42
 Esystemram
-Z51 w1352490909
+Z67 w1369748702
 R4
 R5
 R6
-Z52 8C:/Users/paul.maxwell/Documents/MARC2_DE2/systemram.vhd
-Z53 FC:/Users/paul.maxwell/Documents/MARC2_DE2/systemram.vhd
+Z68 8C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/systemram.vhd
+Z69 FC:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/systemram.vhd
 l0
 L42
 V_g<?dc@@bP?56Zk4nl7[[3
 R9
 31
-Z54 !s108 1354024051.432000
-Z55 !s90 -reportprogress|300|-93|-work|work|C:/Users/paul.maxwell/Documents/MARC2_DE2/systemram.vhd|
-Z56 !s107 C:/Users/paul.maxwell/Documents/MARC2_DE2/systemram.vhd|
+Z70 !s108 1369749014.256000
+Z71 !s90 -reportprogress|300|-93|-work|work|C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/systemram.vhd|
+Z72 !s107 C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/systemram.vhd|
 R13
 R14
 !s100 O0X_@kBm<]JUj`[b23<do2
@@ -282,45 +306,45 @@ R5
 DEx4 work 9 systemram 0 22 _g<?dc@@bP?56Zk4nl7[[3
 l86
 L54
-VBcXio>bDcTB9[0LX4z_8;0
+VdcJ8V><SM>NBaeO2S<Yz^2
 R9
 31
-R54
-R55
-R56
+R70
+R71
+R72
 R13
 R14
-!s100 :7a<E1Xa?HZTK[N71KRV_2
+!s100 9STeZlWiX2[0h=X>?zV2<3
 Esystemrom
-Z57 w1352490964
+Z73 w1369408962
 R4
 R5
 R6
-Z58 8C:/Users/paul.maxwell/Documents/MARC2_DE2/systemrom.vhd
-Z59 FC:/Users/paul.maxwell/Documents/MARC2_DE2/systemrom.vhd
+Z74 8C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/systemrom.vhd
+Z75 FC:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/systemrom.vhd
 l0
 L42
 V1MaIiPcd8Y?5OE70;mQeL1
-!s100 _dU]?=YfH@X3=K2_hIIeo2
 R9
 31
-Z60 !s108 1354024051.635000
-Z61 !s90 -reportprogress|300|-93|-work|work|C:/Users/paul.maxwell/Documents/MARC2_DE2/systemrom.vhd|
-Z62 !s107 C:/Users/paul.maxwell/Documents/MARC2_DE2/systemrom.vhd|
+Z76 !s108 1369749014.396000
+Z77 !s90 -reportprogress|300|-93|-work|work|C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/systemrom.vhd|
+Z78 !s107 C:/Users/paul.maxwell/Documents/GitHub/MARC2_single_stage/MARC2_DE2/systemrom.vhd|
 R13
 R14
+!s100 _dU]?=YfH@X3=K2_hIIeo2
 Asyn
 R4
 R5
 DEx4 work 9 systemrom 0 22 1MaIiPcd8Y?5OE70;mQeL1
 l82
 L52
-VSF_z?O51K7:9M3]]kAF6Y0
-!s100 EYOkITSJhOT_Z1PJHl0SH0
+VH6bmPl01kIEH_2EN<9>HN1
 R9
 31
-R60
-R61
-R62
+R76
+R77
+R78
 R13
 R14
+!s100 <MUD[_nQdILO@OSNAT4F01

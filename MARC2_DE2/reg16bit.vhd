@@ -35,7 +35,7 @@ end reg16bit;
 architecture reg16bit of reg16bit is
 begin
 
-	reg : process (clk, Wr_en, data_in)
+	reg : process (clk, Wr_en, data_in, reset)
 	begin
 		if (reset = '0') then
 			data_out <= (others=>'0');

@@ -3,15 +3,15 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'Clock'
-Slack : 10.562
+Slack : 10.029
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Setup 'altera_reserved_tck'
-Slack : 43.327
+Slack : 44.987
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'Clock'
-Slack : 0.273
+Slack : 0.315
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'altera_reserved_tck'
@@ -19,11 +19,11 @@ Slack : 0.402
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'altera_reserved_tck'
-Slack : 48.020
+Slack : 48.034
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'altera_reserved_tck'
-Slack : 1.422
+Slack : 1.188
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Clock'
@@ -35,15 +35,15 @@ Slack : 49.483
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'Clock'
-Slack : 11.386
+Slack : 10.760
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'altera_reserved_tck'
-Slack : 43.985
+Slack : 45.428
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'Clock'
-Slack : 0.279
+Slack : 0.313
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'altera_reserved_tck'
@@ -51,11 +51,11 @@ Slack : 0.353
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'altera_reserved_tck'
-Slack : 48.317
+Slack : 48.325
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'altera_reserved_tck'
-Slack : 1.302
+Slack : 1.086
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Clock'
@@ -67,15 +67,15 @@ Slack : 49.397
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'Clock'
-Slack : 14.692
+Slack : 14.221
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'altera_reserved_tck'
-Slack : 47.001
+Slack : 47.862
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'Clock'
-Slack : 0.098
+Slack : 0.115
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'altera_reserved_tck'
@@ -87,7 +87,7 @@ Slack : 49.349
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'altera_reserved_tck'
-Slack : 0.669
+Slack : 0.569
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Clock'
