@@ -4,7 +4,7 @@
 -- Design      : designproj2
 -- Author      : MAJ Paul Maxwell
 -- Company     : USMA
---
+-- Modified		: by LTC Paul Maxwell, AY13
 ---------------------------------------------------------------------------------------------------
 --
 -- File        : ControlUnit.vhd
